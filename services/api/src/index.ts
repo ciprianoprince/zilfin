@@ -1,12 +1,10 @@
-import Fastify from "fastify";
+import { S3Client } from "@aws-sdk/client-s3";
 import cors from "@fastify/cors";
-import dotenv from "dotenv";
 import { PrismaClient } from "@prisma/client";
 import { Queue } from "bullmq";
+import dotenv from "dotenv";
+import Fastify from "fastify";
 import IORedis from "ioredis";
-import { randomUUID } from "crypto";
-import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
-import fs from "fs";
 
 dotenv.config();
 

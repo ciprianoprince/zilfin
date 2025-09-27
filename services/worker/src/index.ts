@@ -1,9 +1,9 @@
-import dotenv from "dotenv";
-dotenv.config();
-import { Worker } from "bullmq";
-import IORedis from "ioredis";
 import { PrismaClient } from "@prisma/client";
+import { Worker } from "bullmq";
+import dotenv from "dotenv";
+import IORedis from "ioredis";
 import Typesense from "typesense";
+dotenv.config();
 
 const prisma = new PrismaClient();
 const redis = new IORedis({
