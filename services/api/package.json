@@ -9,7 +9,6 @@
     },
     "dependencies": {
         "@aws-sdk/client-s3": "^3.0.0",
-        "@fastify/cors": "^8.4.0",
         "@prisma/client": "^5.0.0",
         "@types/fastify-cors": "^2.1.2",
         "bullmq": "^2.0.0",
@@ -20,6 +19,8 @@
         "zod": "^3.0.0"
     },
     "devDependencies": {
+        "@fastify/cors": "^8.5.0",
+        "@types/node": "^20.19.17",
         "ts-node-dev": "^2.0.0",
         "typescript": "^5.0.0"
     }

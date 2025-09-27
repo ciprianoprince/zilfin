@@ -5,7 +5,9 @@
         "outDir": "build",
         "strict": true,
         "esModuleInterop": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "types": ["node"]
     },
     "include": ["src"]
 }
