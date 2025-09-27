@@ -1,0 +1,42 @@
+version: "3.8"
+services:
+    postgres:
+        image: postgres:15
+        environment:
+            POSTGRES_DB: realestate
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+        ports:
+            - "5432:5432"
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+
+    redis:
+        image: redis:7
+        ports:
+            - "6379:6379"
+        command: ["redis-server", "--save", "60", "1", "--appendonly", "yes"]
+
+    minio:
+        image: minio/minio:latest
+        command: server /data
+        environment:
+            MINIO_ROOT_USER: minio
+            MINIO_ROOT_PASSWORD: minio123
+        ports:
+            - "9000:9000"
+        volumes:
+            - miniodata:/data
+
+    typesense:
+        image: typesense/typesense:0.24.0
+        command: ["--api-key=typesense_key", "--data-dir=/data"]
+        ports:
+            - "8108:8108"
+        volumes:
+            - typesensedata:/data
+
+volumes:
+    pgdata:
+    miniodata:
+    typesensedata:

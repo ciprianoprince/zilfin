@@ -1,0 +1,13 @@
+{
+    "name": "@pkg/prisma",
+    "private": true,
+    "version": "0.0.1",
+    "main": "index.js",
+    "scripts": {
+        "migrate": "prisma migrate dev --name init",
+        "generate": "prisma generate"
+    },
+    "devDependencies": {
+        "prisma": "^5.0.0"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "@service/api",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+        "build": "tsc -p tsconfig.json",
+        "start": "node build/index.js"
+    },
+    "dependencies": {
+        "@prisma/client": "^5.0.0",
+        "fastify": "^4.0.0",
+        "@fastify/cors": "^8.4.0",
+        "bullmq": "^2.0.0",
+        "ioredis": "^5.3.1",
+        "zod": "^3.0.0",
+        "dotenv": "^16.0.0",
+        "formidable": "^2.0.1",
+        "@aws-sdk/client-s3": "^3.0.0"
+    },
+    "devDependencies": {
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.0.0"
+    }
+}
