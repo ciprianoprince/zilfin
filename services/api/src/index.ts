@@ -1,5 +1,5 @@
 import Fastify from "fastify";
-import cors from "fastify-cors";
+import cors from "@fastify/cors";
 import dotenv from "dotenv";
 import { PrismaClient } from "@prisma/client";
 import { Queue } from "bullmq";
