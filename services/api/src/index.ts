@@ -47,6 +47,7 @@ server.post("/listings", async (req, reply) => {
             price: Number(body.price),
             lat: Number(body.lat),
             lng: Number(body.lng),
+            userId: body.userId,
         },
     });
 
