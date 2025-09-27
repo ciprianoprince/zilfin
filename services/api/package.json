@@ -8,15 +8,16 @@
         "start": "node build/index.js"
     },
     "dependencies": {
-        "@prisma/client": "^5.0.0",
-        "fastify": "^4.0.0",
+        "@aws-sdk/client-s3": "^3.0.0",
         "@fastify/cors": "^8.4.0",
+        "@prisma/client": "^5.0.0",
+        "@types/fastify-cors": "^2.1.2",
         "bullmq": "^2.0.0",
-        "ioredis": "^5.3.1",
-        "zod": "^3.0.0",
         "dotenv": "^16.0.0",
+        "fastify": "^4.0.0",
         "formidable": "^2.0.1",
-        "@aws-sdk/client-s3": "^3.0.0"
+        "ioredis": "^5.3.1",
+        "zod": "^3.0.0"
     },
     "devDependencies": {
         "ts-node-dev": "^2.0.0",
